@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+:root {
+  --primary-color: #420051;
+  --secondary-color: #fdb600;
+  --ternary-color: #00c1fb;
+  --white-color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--ternary-color);
+  font-family: 'Bebas Neue', cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main_wrapper {
+  position: relative;
+}
+
+.main_wrapper .slide_arrow {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--white-color);
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -2rem;
+  margin: auto;
+  border: var(--ternary-color) 5px solid;
+  cursor: pointer;
+}
+
+.main_wrapper .slide_arrow::before {
+  background-image: url(../images/arrow.png);
+  width: 1.6rem;
+  height: 1.6rem;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  content: "";
+}
+
+.main_wrapper .slide_arrow.back::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.main_wrapper ul.menu {
+  width: 10rem;
+  background-color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+  border-radius: 2rem;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.main_wrapper ul.menu li {
+  width: 100%;
+  display: block;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.main_wrapper ul.menu li a {
+  font-size: 2rem;
+  color: var(--white-color);
+  text-decoration: none;
+  display: block;
+  padding: 3rem 0;
+}
+
+.main_wrapper ul.menu li a i {
+  width: 10rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+
+.main_wrapper ul.menu li a .title {
+  opacity: 0;
+  visibility: 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.main_wrapper ul.menu.open {
+  width: 70rem;
+}
+
+.main_wrapper ul.menu.open li a .title {
+  opacity: 1;
+  visibility: visible;
+}
+/*# sourceMappingURL=style.css.map */
